@@ -28,7 +28,7 @@ public class Main extends Application {
         String seq = sc.next();
         System.out.println();
 
-        Matrix small = new Matrix(seq);
+        Controller small = new Controller(seq);
         small.printAUG();
         System.out.println();
         small.printEF();
