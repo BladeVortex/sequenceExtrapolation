@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import java.util.Scanner;
 
 public class Main extends Application {
 
@@ -20,5 +21,20 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+        System.out.println("Matrix Method!");
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter comma separated sequence: ");
+        String seq = sc.next();
+        System.out.println();
+
+        Matrix small = new Matrix(seq);
+        small.printAUG();
+        System.out.println();
+        small.printEF();
+        System.out.println();
+        small.printRREF();
+        System.out.println();
+        small.poly();
     }
 }
